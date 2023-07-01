@@ -46,9 +46,9 @@ class NavBar extends Component {
     return (
       <nav className={this.state.isActive ? 'active' : ''} id="nav">
         <ul>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">YouTube</a></li>
+          <li><a href="https://github.com/RomyGaus" target='_blank' rel='noreferrer'>GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/romy-gaus-46615b272/" target='_blank' rel='noreferrer'>LinkedIn</a></li>
+          <li><a href="#" target='_blank' rel='noreferrer'>YouTube</a></li>
         </ul>
         <button className="icon" id="toggle" onClick={this.toggleNavBar}>
           <div className="line line1"></div>
