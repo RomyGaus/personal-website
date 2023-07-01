@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 import './App.css';
 
-class App extends Component {
+class App extends Component { 
   constructor() {
     super()
     this.state = {
     }
+  }
+
+  componentDidMount () {
+    var bodyDiv = document.getElementsByTagName("body")[0];
+    window.scrollTo(0, bodyDiv.scrollHeight);
+    window.history.scrollRestoration = 'manual';
   }
 
   render() {
@@ -18,6 +24,9 @@ class App extends Component {
         </div>
         <div className='climber'>
           <img alt='climber' src={require('.//images/climber.png')} />
+        </div>
+        <div className='cliff'>
+          <img alt='cliff' src={require('.//images/cliff.png')}/>
         </div>
       </div>
     )
