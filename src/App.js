@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
+import Content from './components/Content';
 import './App.css';
 
 class App extends Component { 
@@ -31,7 +32,7 @@ class App extends Component {
   };
 
   updateMaxDelta = () => {
-    var containerDiv = document.getElementsByClassName("container")[0];
+    var containerDiv = document.getElementsByClassName("scrollContainer")[0];
     const maxDelta = containerDiv.scrollHeight - window.innerHeight;
     this.setState({
       maxDelta
@@ -44,7 +45,7 @@ class App extends Component {
     };
 
     return (
-      <div className='container' style={style_first} onLoad={this.updateMaxDelta} >
+      <div className='container'>
         <div className='header'>
           <h1>Romy Gaus</h1>
           <NavBar></NavBar>
@@ -52,8 +53,11 @@ class App extends Component {
         <div className='climber'>
           <img alt='climber' src={require('.//images/climber.png')} />
         </div>
-        <div className='cliff'>
-          <img alt='cliff' src={require('.//images/cliff.png')}/>
+        <div className='scrollContainer' style={style_first} onLoad={this.updateMaxDelta} >
+          <div className='cliff'>
+            <img alt='cliff' src={require('.//images/cliff.png')}/>
+          </div>
+          <Content></Content>
         </div>
       </div>
     )
