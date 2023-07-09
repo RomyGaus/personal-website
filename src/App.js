@@ -8,7 +8,8 @@ class App extends Component {
     super()
     this.state = {
       deltaY: 0,
-      maxDelta: 0
+      maxDelta: 0,
+      hasFallen: false
     }
   }
 
@@ -19,25 +20,37 @@ class App extends Component {
   }
 
   scrollHandler = event => {
+    this.updateDeltaY(event);
+  }
+
+  updateDeltaY = event => {
     this.setState(state => {
       let newDeltaY = state.deltaY + event.deltaY;
 
       newDeltaY = Math.max(0, newDeltaY);
       newDeltaY = Math.min(this.state.maxDelta, newDeltaY);
 
+      var newHasFallen = state.hasFallen;
+
+      if(newDeltaY > 1000 && state.hasFallen === false) {
+        newHasFallen = true;
+        newDeltaY = 0;
+      }
+
       return {
-        deltaY: newDeltaY
-      };
-    });
-  };
+        deltaY: newDeltaY,
+        hasFallen: newHasFallen
+      }
+    })
+  }
 
   updateMaxDelta = () => {
     var containerDiv = document.getElementsByClassName("scrollContainer")[0];
     const maxDelta = containerDiv.scrollHeight - window.innerHeight;
     this.setState({
       maxDelta
-    });
-  };
+    })
+  }
 
   render() {
     let style_first = {

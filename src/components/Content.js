@@ -14,7 +14,7 @@ class Content extends Component {
 
     checkBoxes = event => {
         const boxes = document.getElementsByClassName("box");
-        const triggerTop = window.innerHeight / 5;
+        const triggerTop = window.innerHeight / 6;
 
         for(const box of boxes){
             const boxBottom = box.getBoundingClientRect().bottom;

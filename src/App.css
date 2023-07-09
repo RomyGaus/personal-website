@@ -12,8 +12,13 @@ body {
   background-image: linear-gradient(to bottom right, #8bd5f7, #416788);
 }
 
-.container{
+.container {
   overflow: auto;
+}
+
+.scrollContainer {
+  overflow: auto;
+  transition: transform 0.2s ease;
 }
 
 .header {
@@ -135,20 +140,33 @@ nav.active .icon .line2 {
 
 .cliff {
   float: right;
-  height: 300vh;
+  background: linear-gradient(to top, orange, green);
+  height: 500vh;
+}
+
+.content {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .box {
   background-color: white;
   color: black;
   display: flex;
+  align-self: flex-end;
   align-items: center;
   justify-content: center;
   width: 400px;
   height: 200px;
-  margin: 10px;
+  margin: 200px;
   border-radius: 10px;
-  transform: translateX(400%);
+  transform: translateX(200%);
   transition: transform 0.5s ease;
 }
 
@@ -157,7 +175,7 @@ nav.active .icon .line2 {
 } */
 
 .box.show {
-  transform: translateX(150%);
+  transform: translateX(0%);
 }
 
 .box h2 {
