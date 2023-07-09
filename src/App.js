@@ -52,6 +52,16 @@ class App extends Component {
     })
   }
 
+  createGrass = () => {
+    let grass = [];
+
+    let numberOfGrass = window.innerWidth/25;
+    for (let i = 0; i < numberOfGrass; i++) {
+      grass.push(<img alt='grass' src={require('.//images/grass.png')}/>)
+    }
+    return grass;
+  }
+ 
   render() {
     let style_first = {
       transform: `translateY(-${this.state.maxDelta - this.state.deltaY}px)`
@@ -69,6 +79,10 @@ class App extends Component {
         <div className='scrollContainer' style={style_first} onLoad={this.updateMaxDelta} >
           <div className='cliff'>
             <img alt='cliff' src={require('.//images/cliff.png')}/>
+          </div>
+          <div className='grass'>
+            {/* <img alt='grass' src={require('.//images/grass.png')}/> */}
+            {this.createGrass()}
           </div>
           <Content></Content>
         </div>
