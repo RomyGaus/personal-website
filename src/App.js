@@ -27,7 +27,6 @@ class App extends Component {
   }
 
   scrollHandler = event => {
-    console.log(this.state.fallState)
     var newScrollY = event.deltaY / 5 + this.state.scrollY
     // If climber is falling, allow falling animation to run
     if(this.state.fallState === FallState.IsFalling ) {
@@ -37,7 +36,6 @@ class App extends Component {
     newScrollY = Math.max(ceiling, 0);
 
     var newFallState = this.state.fallState;
-    console.log(newScrollY)
     if(newScrollY > 1000 && this.state.fallState === FallState.HasNotFallen) {
       // Initiate Falling
       this.fallingClimber();
