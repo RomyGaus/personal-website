@@ -3,13 +3,19 @@ import NavBar from './components/NavBar';
 import Content from './components/Content';
 import './App.css';
 
+const FallState = {
+  HasFallen: 'HasFallen',
+  HasNotFallen: 'HasNotFallen',
+  IsFalling: 'IsFalling'
+}
+
 class App extends Component { 
   constructor() {
     super()
     this.state = {
-      deltaY: 0,
-      maxDelta: 0,
-      hasFallen: false
+      scrollY: 0,
+      maxScroll: 0,
+      fallState: FallState.HasNotFallen
     }
   }
 
@@ -20,35 +26,30 @@ class App extends Component {
   }
 
   scrollHandler = event => {
-    this.updateDeltaY(event);
-  }
+    var newScrollY = event.deltaY + this.state.scrollY
+    // If is falling, go to the ground
+    if(this.state.fallState === FallState.IsFalling){
+      newScrollY = 0;
+    }
+    const ceiling = Math.min(newScrollY, this.state.maxScroll);
+    newScrollY = Math.max(ceiling, 0);
 
-  updateDeltaY = event => {
-    this.setState(state => {
-      let newDeltaY = state.deltaY + event.deltaY;
+    var newFallState = this.state.fallState;
+    console.log(newScrollY)
+    if(newScrollY > 1000 && this.state.fallState === FallState.HasNotFallen) {
+      // Initiate Falling
+      console.log('start falling');
+      newFallState = FallState.IsFalling;
+      newScrollY = 0;
+    } else if(newScrollY === 0) {
+      console.log('ground');
+      // User is on the ground
+      newFallState = FallState.HasFallen
+    }
 
-      newDeltaY = Math.max(0, newDeltaY);
-      newDeltaY = Math.min(this.state.maxDelta, newDeltaY);
-
-      var newHasFallen = state.hasFallen;
-
-      if(newDeltaY > 1000 && state.hasFallen === false) {
-        newHasFallen = true;
-        newDeltaY = 0;
-      }
-
-      return {
-        deltaY: newDeltaY,
-        hasFallen: newHasFallen
-      }
-    })
-  }
-
-  updateMaxDelta = () => {
-    var containerDiv = document.getElementsByClassName("scrollContainer")[0];
-    const maxDelta = containerDiv.scrollHeight - window.innerHeight;
     this.setState({
-      maxDelta
+      scrollY: newScrollY,
+      fallState: newFallState
     })
   }
 
@@ -61,10 +62,17 @@ class App extends Component {
     }
     return grass;
   }
+
+  updateMaxDelta = () => {
+    var containerDiv = document.getElementsByClassName("scrollContainer")[0];
+    this.setState({
+      maxScroll: containerDiv.scrollHeight - window.innerHeight
+    })
+  }
  
   render() {
-    let style_first = {
-      transform: `translateY(-${this.state.maxDelta - this.state.deltaY}px)`
+    let scrollStyle = {
+      bottom: `-${this.state.scrollY}px`
     };
 
     return (
@@ -76,12 +84,11 @@ class App extends Component {
         <div className='climber'>
           <img alt='climber' src={require('.//images/climber.png')} />
         </div>
-        <div className='scrollContainer' style={style_first} onLoad={this.updateMaxDelta} >
+        <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
           <div className='cliff'>
             <img alt='cliff' src={require('.//images/cliff.png')}/>
           </div>
           <div className='grass'>
-            {/* <img alt='grass' src={require('.//images/grass.png')}/> */}
             {this.createGrass()}
           </div>
           <Content></Content>
