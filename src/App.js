@@ -6,7 +6,8 @@ import './App.css';
 const FallState = {
   HasFallen: 'HasFallen',
   HasNotFallen: 'HasNotFallen',
-  IsFalling: 'IsFalling'
+  IsFalling: 'IsFalling',
+  Recovering: 'Recovering'
 }
 
 class App extends Component { 
@@ -26,10 +27,11 @@ class App extends Component {
   }
 
   scrollHandler = event => {
-    var newScrollY = event.deltaY + this.state.scrollY
-    // If is falling, go to the ground
-    if(this.state.fallState === FallState.IsFalling){
-      newScrollY = 0;
+    console.log(this.state.fallState)
+    var newScrollY = event.deltaY / 5 + this.state.scrollY
+    // If climber is falling, allow falling animation to run
+    if(this.state.fallState === FallState.IsFalling ) {
+      return
     }
     const ceiling = Math.min(newScrollY, this.state.maxScroll);
     newScrollY = Math.max(ceiling, 0);
@@ -38,19 +40,32 @@ class App extends Component {
     console.log(newScrollY)
     if(newScrollY > 1000 && this.state.fallState === FallState.HasNotFallen) {
       // Initiate Falling
-      console.log('start falling');
-      newFallState = FallState.IsFalling;
+      this.fallingClimber();
+      newScrollY = 1000
+      newFallState = FallState.IsFalling
+    } else if(this.state.fallState === FallState.Recovering) {
       newScrollY = 0;
-    } else if(newScrollY === 0) {
-      console.log('ground');
+    } else if(newScrollY === 0
+      && this.state.fallState !== FallState.HasNotFallen) {
       // User is on the ground
-      newFallState = FallState.HasFallen
+      newFallState = FallState.Recovering
     }
 
     this.setState({
       scrollY: newScrollY,
       fallState: newFallState
     })
+  }
+
+  fallingClimber = () => {
+    var containerDiv = document.getElementsByClassName("scrollContainer")[0];
+    let animation = containerDiv.animate({bottom: 0}, 2000);
+    animation.onfinish = event => {
+      this.setState({
+        scrollY: 0,
+        fallState: FallState.Recovering
+      })
+    }
   }
 
   createGrass = () => {
