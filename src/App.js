@@ -32,6 +32,8 @@ class App extends Component {
     if(this.state.fallState === FallState.IsFalling ) {
       return
     }
+
+    // put boundaries on scrolling
     const ceiling = Math.min(newScrollY, this.state.maxScroll);
     newScrollY = Math.max(ceiling, 0);
 
@@ -43,10 +45,6 @@ class App extends Component {
       newFallState = FallState.IsFalling
     } else if(this.state.fallState === FallState.Recovering) {
       newScrollY = 0;
-    } else if(newScrollY === 0
-      && this.state.fallState !== FallState.HasNotFallen) {
-      // User is on the ground
-      newFallState = FallState.Recovering
     }
 
     this.setState({
@@ -82,7 +80,13 @@ class App extends Component {
       maxScroll: containerDiv.scrollHeight - window.innerHeight
     })
   }
- 
+
+  continueScrolling = () => {
+    this.setState({
+      fallState: FallState.HasFallen
+    })
+  } 
+
   render() {
     let scrollStyle = {
       bottom: `-${this.state.scrollY}px`
@@ -97,10 +101,20 @@ class App extends Component {
         <div className='climber'>
           <img alt='climber' src={require('.//images/climber.png')} />
         </div>
+        {/* <div className='romy-bottom'>
+          <img alt='climber' src={require('.//images/Romy.png')} />
+        </div> */}
         <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
           <div className='cliff'>
-            <img alt='cliff' src={require('.//images/cliff.png')}/>
+            <img alt='cliff' src={require('.//images/Wall Top.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 1.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 2.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 3.png')}/>
           </div>
+          { this.state.fallState === FallState.Recovering
+            ? <button type='button' className='btn' onClick={this.continueScrolling}>Continue</button>
+            : <div></div>
+          }
           <div className='grass'>
             {this.createGrass()}
           </div>
