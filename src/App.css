@@ -152,6 +152,20 @@ nav.active .icon .line2 {
   height: 100%;
 }
 
+.falling-climber {
+  height: 30vh;
+  display: inline-block;
+  position: fixed;
+  bottom: 15%;
+  left: 55%;
+  transform: translate(-100%, 0%);
+  z-index: 900;
+}
+
+.falling-climber img {
+  height: 100%;
+}
+
 .romy-bottom {
   height: 30vh;
   display: inline-block;

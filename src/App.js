@@ -99,7 +99,10 @@ class App extends Component {
           <NavBar></NavBar>
         </div>
         <div className='climber'>
-          <img alt='climber' src={require('.//images/climber.png')} />
+          { this.state.fallState === FallState.IsFalling
+            ? <img alt='falling climber' src={require('.//images/falling.png')} />
+            : <img alt='climber' src={require('.//images/climber.png')} />
+          }
         </div>
         <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
           <div className='romy-top'>
