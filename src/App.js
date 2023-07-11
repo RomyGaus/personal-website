@@ -101,10 +101,10 @@ class App extends Component {
         <div className='climber'>
           <img alt='climber' src={require('.//images/climber.png')} />
         </div>
-        {/* <div className='romy-bottom'>
-          <img alt='climber' src={require('.//images/Romy.png')} />
-        </div> */}
         <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
+          <div className='romy-top'>
+            <img alt='romy with flag' src={require('.//images/Romy Flag.png')} />
+          </div>
           <div className='cliff'>
             <img alt='cliff' src={require('.//images/Wall Top.png')}/>
             <img alt='cliff' src={require('.//images/Wall 1.png')}/>
@@ -115,6 +115,9 @@ class App extends Component {
             ? <button type='button' className='btn' onClick={this.continueScrolling}>Continue</button>
             : <div></div>
           }
+          <div className='romy-bottom'>
+            <img alt='romy' src={require('.//images/Romy.png')} />
+          </div>
           <div className='grass'>
             {this.createGrass()}
           </div>

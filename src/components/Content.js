@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 
 class Content extends Component {
-    constructor() {
-        super()
-        this.state = {
-        }
-    }
-    
+
     componentDidMount() {
         window.addEventListener('wheel', this.checkBoxes);
         window.addEventListener("DOMMouseScroll", this.checkBoxes);
@@ -29,11 +24,11 @@ class Content extends Component {
     render() {
         return(
             <div className='content'>
-                <div className="box"><h2>Schule und Ausbildung</h2></div>
-                <div className="box"><h2>Chemielaborantin Jobs</h2></div>
-                <div className="box"><h2>ZTM Course</h2></div>
-                <div className="box"><h2>50 Days 50 Projects</h2></div>
                 <div className="box"><h2>other projects</h2></div>
+                <div className="box"><h2>50 Days 50 Projects</h2></div>
+                <div className="box"><h2>ZTM Course</h2></div>
+                <div className="box"><h2>Chemielaborantin Jobs</h2></div>
+                <div className="box"><h2>Schule und Ausbildung</h2></div>
             </div>
         )
     }
