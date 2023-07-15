@@ -92,6 +92,18 @@ class App extends Component {
       bottom: `-${this.state.scrollY}px`
     };
 
+    let climberImgSrc = require('.//images/falling.png');
+    if(this.state.fallState !== FallState.IsFalling) {
+      const multiple = 100;
+      const scrollOffset = this.state.scrollY;
+      const floorMultiple = Math.floor(scrollOffset/multiple);
+      if( floorMultiple * multiple % (multiple * 2) === 0) {
+        climberImgSrc = require('.//images/climber_left.png')
+      } else {
+        climberImgSrc = require('.//images/climber_right.png')
+      }
+    }
+
     return (
       <div className='container'>
         <div className='header'>
@@ -99,10 +111,7 @@ class App extends Component {
           <NavBar></NavBar>
         </div>
         <div className='climber'>
-          { this.state.fallState === FallState.IsFalling
-            ? <img alt='falling climber' src={require('.//images/falling.png')} />
-            : <img alt='climber' src={require('.//images/climber.png')} />
-          }
+          <img alt='climber' src={climberImgSrc} />
         </div>
         <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
           <div className='romy-top'>
