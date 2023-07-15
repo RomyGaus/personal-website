@@ -130,7 +130,6 @@ nav.active .icon .line2 {
   height: 35vh;
   display: inline-block;
   position: absolute;
-  top: 5.3%;
   right: 25%;
   z-index: 900;
 }
@@ -178,27 +177,12 @@ nav.active .icon .line2 {
   height: 35vh;
   display: inline-block;
   position: fixed;
-  top: 50vh;
   left: 55%;
   transform: translate(-100%, 0%);
   z-index: 900;
 }
 
 .climber img {
-  height: 100%;
-}
-
-.falling-climber {
-  height: 35vh;
-  display: inline-block;
-  position: fixed;
-  bottom: 15%;
-  left: 55%;
-  transform: translate(-100%, 0%);
-  z-index: 900;
-}
-
-.falling-climber img {
   height: 100%;
 }
 

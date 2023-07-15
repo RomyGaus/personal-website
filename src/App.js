@@ -16,7 +16,9 @@ class App extends Component {
     this.state = {
       scrollY: 0,
       maxScroll: 0,
-      fallState: FallState.HasNotFallen
+      fallState: FallState.HasNotFallen,
+      cliffTop: 0,
+      climberTop: 0
     }
   }
 
@@ -38,14 +40,16 @@ class App extends Component {
     newScrollY = Math.max(ceiling, 0);
 
     var newFallState = this.state.fallState;
-    if(newScrollY > 1000 && this.state.fallState === FallState.HasNotFallen) {
+    if(newScrollY > 700 && this.state.fallState === FallState.HasNotFallen) {
       // Initiate Falling
       this.fallingClimber();
-      newScrollY = 1000
+      newScrollY = 700
       newFallState = FallState.IsFalling
     } else if(this.state.fallState === FallState.Recovering) {
       newScrollY = 0;
     }
+
+    this.updateClimberTop();
 
     this.setState({
       scrollY: newScrollY,
@@ -78,7 +82,26 @@ class App extends Component {
     var containerDiv = document.getElementsByClassName("scrollContainer")[0];
     this.setState({
       maxScroll: containerDiv.scrollHeight - window.innerHeight
-    })
+    });
+    this.updateClimberTop();
+  }
+
+  setCliffTop = () => {
+    var cliffTopEl = document.getElementsByClassName("cliffTop")[0];
+    this.setState({
+      cliffTop: cliffTopEl.scrollHeight / 2
+    });
+  }
+
+  updateClimberTop = () => {
+    let newCliffOffset = this.state.cliffTop - (this.state.maxScroll - this.state.scrollY);
+    let defaultTop = window.innerHeight / 2;
+
+    const newClimberTop = Math.max(newCliffOffset, defaultTop);
+
+    this.setState({
+      climberTop: newClimberTop
+    });
   }
 
   continueScrolling = () => {
@@ -104,17 +127,25 @@ class App extends Component {
       }
     }
 
+    let climberTopStyle = {
+      top: `${this.state.climberTop}px`
+    };    
+
+    let romyTopStyle = {
+      top: `${this.state.cliffTop - window.innerHeight * 0.35}px`
+    }
+
     return (
       <div className='container'>
         <div className='header'>
           <h1>Romy Gaus</h1>
           <NavBar></NavBar>
         </div>
-        <div className='climber'>
+        <div className='climber' style={climberTopStyle}>
           <img alt='climber' src={climberImgSrc} />
         </div>
         <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
-          <div className='romy-top'>
+          <div className='romy-top' style={romyTopStyle}>
             <img alt='romy with flag' src={require('.//images/Romy Flag.png')} />
           </div>
           <div className='birds-left'>
@@ -127,8 +158,12 @@ class App extends Component {
             <img alt='balloon' src={require('.//images/Balloon.png')} />
           </div>
           <div className='cliff'>
-            <img alt='cliff' src={require('.//images/Wall Top.png')}/>
+            <img className='cliffTop' alt='cliff' src={require('.//images/Wall Top.png')} onLoad={this.setCliffTop}/>
             <img alt='cliff' src={require('.//images/Wall 1.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 2.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 3.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 1.png')}/>
+            <img alt='cliff' src={require('.//images/Wall 3.png')}/>
             <img alt='cliff' src={require('.//images/Wall 2.png')}/>
             <img alt='cliff' src={require('.//images/Wall 3.png')}/>
           </div>
