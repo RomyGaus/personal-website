@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Education from './Education';
 
 class Content extends Component {
 
@@ -28,7 +29,7 @@ class Content extends Component {
                 <div className="box"><h2>50 Days 50 Projects</h2></div>
                 <div className="box"><h2>ZTM Course</h2></div>
                 <div className="box"><h2>Chemielaborantin Jobs</h2></div>
-                <div className="box"><h2>Schule und Ausbildung</h2></div>
+                <Education></Education>
             </div>
         )
     }

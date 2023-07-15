@@ -92,15 +92,15 @@ class App extends Component {
       bottom: `-${this.state.scrollY}px`
     };
 
-    let climberImgSrc = require('.//images/falling.png');
+    let climberImgSrc = require('.//images/Miles falling.png');
     if(this.state.fallState !== FallState.IsFalling) {
       const multiple = 100;
       const scrollOffset = this.state.scrollY;
       const floorMultiple = Math.floor(scrollOffset/multiple);
       if( floorMultiple * multiple % (multiple * 2) === 0) {
-        climberImgSrc = require('.//images/climber_left.png')
+        climberImgSrc = require('.//images/Miles Climbing left hand.png')
       } else {
-        climberImgSrc = require('.//images/climber_right.png')
+        climberImgSrc = require('.//images/Miles Climbing right hand.png')
       }
     }
 

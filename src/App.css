@@ -7,8 +7,6 @@
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background-color: #8bd5f7;
-  background-image: linear-gradient(to bottom right, #8bd5f7, #416788);
 }
 
 .container {
@@ -20,6 +18,8 @@ body {
   position: fixed;
   left: 0;
   width: 100%;
+  background-color: #ccecfc;
+  background-image: linear-gradient(to top, #ccecfc, #8bd5f7, #527593, #3F505F);
 }
 
 .header {
@@ -126,10 +126,10 @@ nav.active .icon .line2 {
 }
 
 .romy-top {
-  height: 30vh;
+  height: 35vh;
   display: inline-block;
   position: absolute;
-  top: 5.9%;
+  top: 5.3%;
   right: 25%;
   z-index: 900;
 }
@@ -139,7 +139,7 @@ nav.active .icon .line2 {
 }
 
 .climber {
-  height: 30vh;
+  height: 35vh;
   display: inline-block;
   position: fixed;
   bottom: 15%;
@@ -153,7 +153,7 @@ nav.active .icon .line2 {
 }
 
 .falling-climber {
-  height: 30vh;
+  height: 35vh;
   display: inline-block;
   position: fixed;
   bottom: 15%;
@@ -167,7 +167,7 @@ nav.active .icon .line2 {
 }
 
 .romy-bottom {
-  height: 30vh;
+  height: 35vh;
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -205,6 +205,10 @@ nav.active .icon .line2 {
   left: 50vw;
   transform: translate(-50%, -50%);
   z-index: 900;
+}
+
+.btn:active {
+  transform: translate(-50%, -50%) scale(0.95);
 }
 
 .grass {
