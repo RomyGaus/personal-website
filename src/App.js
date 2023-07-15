@@ -117,6 +117,15 @@ class App extends Component {
           <div className='romy-top'>
             <img alt='romy with flag' src={require('.//images/Romy Flag.png')} />
           </div>
+          <div className='birds-left'>
+            <img alt='birds' src={require('.//images/Birds.png')} />
+          </div>
+          <div className='birds-right'>
+            <img alt='birds' src={require('.//images/Birds.png')} />
+          </div>
+          <div className='balloon'>
+            <img alt='balloon' src={require('.//images/Balloon.png')} />
+          </div>
           <div className='cliff'>
             <img alt='cliff' src={require('.//images/Wall Top.png')}/>
             <img alt='cliff' src={require('.//images/Wall 1.png')}/>
