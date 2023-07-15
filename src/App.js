@@ -66,6 +66,9 @@ class App extends Component {
         fallState: FallState.Recovering
       })
     }
+
+    var ropeDiv = document.getElementsByClassName("rope")[0];
+    ropeDiv.animate({bottom: `${window.innerHeight * 0.32}px`}, 2000);
   }
 
   createGrass = () => {
@@ -135,6 +138,34 @@ class App extends Component {
       top: `${this.state.cliffTop - window.innerHeight * 0.35}px`
     }
 
+    let ropeStyle = {
+      top: `${this.state.cliffTop}px`,
+      bottom: `${this.state.scrollY + window.innerHeight * 0.32}px`
+    }
+
+    let left = window.innerWidth * 0.05 + window.innerHeight * 0.175;
+    let bottom = window.innerHeight * 0.175 - 5;
+    let opposite = window.innerWidth * 0.4 - left;
+    let adjacent = this.state.maxScroll - bottom + window.innerHeight - this.state.cliffTop;
+    let angle = Math.tan(opposite/adjacent);
+    let belayRopeStyle = {
+      transform: `rotate(${angle}rad)`,
+      left: `${left + opposite / 2}px`,
+      height: `${adjacent}px`,
+      bottom: `${bottom}px`,
+    }
+
+    // let left = window.innerWidth * 0.05 + window.innerHeight * 0.175;
+    // let bottom = window.innerHeight * 0.175;
+    // let opposite = window.innerWidth * 0.4 - left;
+    // let adjacent = this.state.maxScroll - bottom + window.innerHeight - this.state.cliffTop;
+    // let belayRopeStyle = {
+    //   left: `${left}px`,
+    //   width: `${opposite}px`,
+    //   height: `${adjacent}px`,
+    //   bottom: `${bottom}px`
+    // }
+
     return (
       <div className='container'>
         <div className='header'>
@@ -157,6 +188,8 @@ class App extends Component {
           <div className='balloon'>
             <img alt='balloon' src={require('.//images/Balloon.png')} />
           </div>
+          <div className='rope' style={ropeStyle} ></div>
+          <div className='belayRope' style={belayRopeStyle} ></div>
           <div className='cliff'>
             <img className='cliffTop' alt='cliff' src={require('.//images/Wall Top.png')} onLoad={this.setCliffTop}/>
             <img alt='cliff' src={require('.//images/Wall 1.png')}/>

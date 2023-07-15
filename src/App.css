@@ -177,8 +177,8 @@ nav.active .icon .line2 {
   height: 35vh;
   display: inline-block;
   position: fixed;
-  left: 55%;
-  transform: translate(-100%, 0%);
+  left: 40%;
+  transform: translate(-50%, 0%);
   z-index: 900;
 }
 
@@ -191,7 +191,7 @@ nav.active .icon .line2 {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  left: 5%;
+  left: 5vw;
   z-index: 900;
 }
 
@@ -207,6 +207,22 @@ nav.active .icon .line2 {
 
 .cliff img {
   width: 60%;
+}
+
+.rope {
+  display: inline-block;
+  position: absolute;
+  background-color: #444444;
+  width: 3px;
+  left: 40%;
+  transform: translate(-50%, 0%);
+}
+
+.belayRope {
+  display: inline-block;
+  position: absolute;
+  background-color: #444444;
+  width: 3px;
 }
 
 .btn {
