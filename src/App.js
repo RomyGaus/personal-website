@@ -181,10 +181,11 @@ class App extends Component {
             ? <div className='birds-right'><img alt='birds' src={require('.//images/Birds.png')} /></div>
             : <div></div>
           }
-          {this.state.scrollY > 2200 -window.innerHeight / 2
+          {this.state.scrollY > 2200 - window.innerHeight / 2
             ? <div className='balloon'><img alt='balloon' src={require('.//images/Balloon.png')} /></div>
             : <div></div>
           }
+          <div className={`spaceship ${this.state.scrollY > this.state.maxScroll - 200 ? 'show' : ''}`}><img alt='spaceship' src={require('.//images/spaceship.png')} /></div>
           <div className='rope' style={ropeStyle} ></div>
           <div className='belayRope' style={belayRopeStyle} ></div>
           <div className='cliff'>
