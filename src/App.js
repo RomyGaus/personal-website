@@ -122,11 +122,16 @@ class App extends Component {
     if(this.state.fallState !== FallState.IsFalling) {
       const multiple = 100;
       const scrollOffset = this.state.scrollY;
-      const floorMultiple = Math.floor(scrollOffset/multiple);
-      if( floorMultiple * multiple % (multiple * 2) === 0) {
-        climberImgSrc = require('.//images/Miles Climbing left hand.png')
+      const floor = Math.floor(scrollOffset/multiple);
+      const moduloResult = floor % 4;
+      if(moduloResult === 0) {
+        climberImgSrc = require('.//images/climber1.png')
+      } else if(moduloResult === 1){
+        climberImgSrc = require('.//images/climber2.png')
+      } else if(moduloResult === 2) {
+        climberImgSrc = require('.//images/climber3.png')
       } else {
-        climberImgSrc = require('.//images/Miles Climbing right hand.png')
+        climberImgSrc = require('.//images/climber4.png')
       }
     }
 
@@ -155,17 +160,6 @@ class App extends Component {
       bottom: `${bottom}px`,
     }
 
-    // let left = window.innerWidth * 0.05 + window.innerHeight * 0.175;
-    // let bottom = window.innerHeight * 0.175;
-    // let opposite = window.innerWidth * 0.4 - left;
-    // let adjacent = this.state.maxScroll - bottom + window.innerHeight - this.state.cliffTop;
-    // let belayRopeStyle = {
-    //   left: `${left}px`,
-    //   width: `${opposite}px`,
-    //   height: `${adjacent}px`,
-    //   bottom: `${bottom}px`
-    // }
-
     return (
       <div className='container'>
         <div className='header'>
@@ -179,15 +173,18 @@ class App extends Component {
           <div className='romy-top' style={romyTopStyle}>
             <img alt='romy with flag' src={require('.//images/Romy Flag.png')} />
           </div>
-          <div className='birds-left'>
-            <img alt='birds' src={require('.//images/Birds.png')} />
-          </div>
-          <div className='birds-right'>
-            <img alt='birds' src={require('.//images/Birds.png')} />
-          </div>
-          <div className='balloon'>
-            <img alt='balloon' src={require('.//images/Balloon.png')} />
-          </div>
+          { this.state.scrollY > 3700 - window.innerHeight / 2
+            ? <div className='birds-left'><img alt='birds' src={require('.//images/Birds.png')} /></div>
+            : <div></div>
+          }
+          { this.state.scrollY > 2000 - window.innerHeight / 2
+            ? <div className='birds-right'><img alt='birds' src={require('.//images/Birds.png')} /></div>
+            : <div></div>
+          }
+          {this.state.scrollY > 2200 -window.innerHeight / 2
+            ? <div className='balloon'><img alt='balloon' src={require('.//images/Balloon.png')} /></div>
+            : <div></div>
+          }
           <div className='rope' style={ropeStyle} ></div>
           <div className='belayRope' style={belayRopeStyle} ></div>
           <div className='cliff'>

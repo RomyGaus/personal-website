@@ -140,9 +140,12 @@ nav.active .icon .line2 {
 
 .birds-left {
   position: absolute;
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
+  left: -200px;
   bottom: 3700px;
+  transform: translateX(2000%);
+  transition: transform 10s linear;
 }
 
 .birds-left img {
@@ -151,26 +154,41 @@ nav.active .icon .line2 {
 
 .birds-right {
   position: absolute;
-  height: 100px;
-  width: 100px;
-  transform: scaleX(-1);
+  height: 200px;
+  width: 200px;
+  right: -200px;
   bottom: 2000px;
-  /* transform: translateX(2000%);
-  transition: transform 1.5s ease; */
+  transform: translateX(-2000%);
+  transition: transform 10s linear;
 }
 
 .birds-right img {
   height: 100%;
+  transform: scaleX(-1);
 }
 
 .balloon {
   position: absolute;
   height: 600px;
   bottom: 2200px;
+  left: -400px;
+  animation: 20s ease-out 0s 1 moveBalloon;
 }
 
 .balloon img {
   height: 100%;
+}
+
+@keyframes moveBalloon {
+  0% {
+    transform: translateX(-100%);
+  }
+  10% {
+    transform: translateX(90%);
+  }
+  100% {
+    transform: translate(-100%, -1000%);
+  }
 }
 
 .climber {
