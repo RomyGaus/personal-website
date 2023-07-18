@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 
-class Education extends Component {
+class WorkExperience extends Component {
     render() {
         return(
             <div className='box'>
-                <h2>School and Apprenticeship</h2>
+                <h2>Work Experience</h2>
                 <ul>
                     <li>
                         <p className='date'>
-                            09/2013 - 07/2016
+                            since 09/2019 
                             <br></br>
-                            Landesamt für Natur,Umwelt und Verbraucherschutz
+                            LINEG
                         </p>
                         <p>
-                            Apprenticeship as a chemical laboratory technican
+                            Position: chemical laboratory technican
                             <br></br>
-                            Final score school: ø 1.8
-                            <br></br>
-                            Final score: 91/100 points
+                            tasks: analyze water samples, quality management
                         </p>
                     </li>
                     <li>
@@ -36,4 +34,4 @@ class Education extends Component {
     }
 }
 
-export default Education;
+export default WorkExperience;

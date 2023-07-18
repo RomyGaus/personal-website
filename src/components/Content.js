@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Education from './Education';
+import WorkExperience from './WorkExperience';
+import ZTM from './ZTM';
+import ProjectCourse from './ProjectCourse';
 
 class Content extends Component {
 
@@ -10,7 +13,7 @@ class Content extends Component {
 
     checkBoxes = event => {
         const boxes = document.getElementsByClassName("box");
-        const triggerTop = window.innerHeight / 6;
+        const triggerTop = window.innerHeight / 2;
 
         for(const box of boxes){
             const boxBottom = box.getBoundingClientRect().bottom;
@@ -25,10 +28,11 @@ class Content extends Component {
     render() {
         return(
             <div className='content'>
+                <div className="box"><h2>other projects2</h2></div>
                 <div className="box"><h2>other projects</h2></div>
-                <div className="box"><h2>50 Days 50 Projects</h2></div>
-                <div className="box"><h2>ZTM Course</h2></div>
-                <div className="box"><h2>Chemielaborantin Jobs</h2></div>
+                <ProjectCourse></ProjectCourse>
+                <ZTM></ZTM>
+                <WorkExperience></WorkExperience>
                 <Education></Education>
             </div>
         )

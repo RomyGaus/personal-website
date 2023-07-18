@@ -170,6 +170,12 @@ class App extends Component {
           <img alt='climber' src={climberImgSrc} />
         </div>
         <div className='scrollContainer' style={scrollStyle} onLoad={this.updateMaxDelta} >
+          <div className='stars'>
+            <img alt='stars' src={require('.//images/virgo.png')} />
+          </div>
+          <div className='moon'>
+            <img alt='moon' src={require('.//images/moon.png')} />
+          </div>
           <div className='romy-top' style={romyTopStyle}>
             <img alt='romy with flag' src={require('.//images/Romy Flag.png')} />
           </div>
@@ -183,6 +189,18 @@ class App extends Component {
           }
           {this.state.scrollY > 2200 - window.innerHeight / 2
             ? <div className='balloon'><img alt='balloon' src={require('.//images/Balloon.png')} /></div>
+            : <div></div>
+          }
+          {this.state.scrollY > 2600 - window.innerHeight / 2
+            ? <div className='clouds'><img alt='clouds' src={require('.//images/clouds.png')} /></div>
+            : <div></div>
+          }
+          {this.state.scrollY > 4500 - window.innerHeight / 2
+            ? <div className='clouds-left'><img alt='clouds' src={require('.//images/clouds.png')} /></div>
+            : <div></div>
+          }
+          {this.state.scrollY > 5000 - window.innerHeight / 2
+            ? <div className='clouds-left-2'><img alt='clouds' src={require('.//images/clouds.png')} /></div>
             : <div></div>
           }
           <div className={`spaceship ${this.state.scrollY > this.state.maxScroll - 200 ? 'show' : ''}`}><img alt='spaceship' src={require('.//images/spaceship.png')} /></div>
@@ -200,6 +218,10 @@ class App extends Component {
           </div>
           { this.state.fallState === FallState.Recovering
             ? <button type='button' className='btn' onClick={this.continueScrolling}>Continue</button>
+            : <div></div>
+          }
+          { this.state.fallState === FallState.IsFalling
+            ? <div class="bubble">Don't worry! I got you!</div>
             : <div></div>
           }
           <div className='romy-bottom'>

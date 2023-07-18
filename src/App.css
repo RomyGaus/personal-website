@@ -126,6 +126,32 @@ nav.active .icon .line2 {
   transform: rotate(765deg) translateY(-5.5px);
 }
 
+.stars {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  right: 0;
+  z-index: -100;
+}
+
+.stars img {
+  height: 110%;
+  width: 100%;
+}
+
+.moon {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  left: -60px;
+  top: -60px;
+}
+
+.moon img {
+  height: 100%;
+  width: 100%;
+}
+
 .romy-top {
   height: 35vh;
   display: inline-block;
@@ -178,6 +204,53 @@ nav.active .icon .line2 {
 .balloon img {
   height: 100%;
 }
+
+.clouds {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  right: -800px;
+  bottom: 2600px;
+  transform: translateX(-2000%);
+  transition: transform 90s linear;
+}
+
+.clouds img {
+  height: 100%;
+}
+
+.clouds-left {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  left: -800px;
+  bottom: 4500px;
+  transform: translateX(2000%);
+  transition: transform 90s linear;
+  z-index: -100;
+}
+
+.clouds-left img {
+  height: 100%;
+  transform: scaleX(-1);
+}
+
+.clouds-left-2 {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  left: -800px;
+  bottom: 5000px;
+  transform: translateX(2000%);
+  transition: transform 90s linear;
+  z-index: -100;
+}
+
+.clouds-left-2 img {
+  height: 100%;
+  transform: scaleX(-1);
+}
+
 
 @keyframes moveBalloon {
   0% {
@@ -233,6 +306,36 @@ nav.active .icon .line2 {
 
 .romy-bottom img {
   height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  background: #ffffff;
+  color: #000000;
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 100px;
+  text-align: center;
+  width: 250px;
+  height: 100px;
+  border-radius: 100px;
+  padding: 0px;
+  bottom: 300px;
+  left: 55px;
+}
+.bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-width: 35px 35px 0 0;
+  border-color: #ffffff transparent transparent transparent;
+  bottom: -35px;
+  left: 60%;
+  margin-left: -20px;
 }
 
 .cliff {
@@ -309,13 +412,15 @@ nav.active .icon .line2 {
 
 .box {
   background-color: white;
+  font-family: inherit;
   color: black;
   display: flex;
+  flex-wrap: wrap;
   align-self: flex-end;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
   margin: 200px;
   border-radius: 10px;
   transform: translateX(200%);
@@ -331,5 +436,19 @@ nav.active .icon .line2 {
 }
 
 .box h2 {
-  font-size: 45px;
+  font-size: 25px;
+  margin: 0;
+}
+
+.box ul {
+  list-style-type: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.box .date {
+  font-weight: 600;
 }
