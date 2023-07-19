@@ -419,12 +419,32 @@ nav.active .icon .line2 {
   align-self: flex-end;
   align-items: center;
   justify-content: center;
-  width: 500px;
-  height: 400px;
+  width: 550px;
+  height: 200px;
   margin: 200px;
   border-radius: 10px;
   transform: translateX(200%);
   transition: transform 0.5s ease;
+}
+
+.box.work {
+  width: 550px;
+  height: 600px;
+}
+
+.box.education {
+  width: 550px;
+  height: 350px;
+}
+
+.box.ztm {
+  width: 550px;
+  height: 400px;
+}
+
+.box.project-course {
+  width: 550px;
+  height: 300px;
 }
 
 /* .box:nth-of-type(even) {
@@ -438,6 +458,7 @@ nav.active .icon .line2 {
 .box h2 {
   font-size: 25px;
   margin: 0;
+  text-align: center;
 }
 
 .box ul {

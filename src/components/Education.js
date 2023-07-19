@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Education extends Component {
     render() {
         return(
-            <div className='box'>
+            <div className='box education'>
                 <h2>School and Apprenticeship</h2>
                 <ul>
                     <li>

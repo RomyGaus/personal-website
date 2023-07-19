@@ -220,7 +220,7 @@ class App extends Component {
             ? <button type='button' className='btn' onClick={this.continueScrolling}>Continue</button>
             : <div></div>
           }
-          { this.state.fallState === FallState.IsFalling
+          { this.state.fallState === FallState.IsFalling || this.state.fallState === FallState.Recovering
             ? <div class="bubble">Don't worry! I got you!</div>
             : <div></div>
           }
