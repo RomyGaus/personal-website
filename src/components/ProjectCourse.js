@@ -22,9 +22,8 @@ class ProjectCourse extends Component {
                         <p className='date'>
                             Course Projects:
                         </p>
-                        <p>
-                            {/* Link zur Website */}
-                            {/* <a href="" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>50 Projects in 50 Days - Romy Gaus</a> */}
+                        <p> 
+                            <a href="https://romygaus.github.io/50projects50days/" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>50 Projects in 50 Days - Romy Gaus</a>
                         </p>
                     </li>
                     <li>
