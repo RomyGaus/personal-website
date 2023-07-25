@@ -31,7 +31,7 @@ class ProjectCourse extends Component {
                             Certificate:
                         </p>
                         <p>
-                            {/* <a href=".//images/Certificate_ZTM.jpeg" target='_blank' rel='noreferrer'>Certificate</a> */}
+                            <a href="https://github.com/RomyGaus/personal_website/blob/7a595de746a1b5250cc991875491558168983675/src/images/Certificate%2050ProjectsIn50Days.jpeg" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Certificate</a>
                         </p>
                     </li>
                 </ul>
