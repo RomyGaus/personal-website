@@ -1,6 +1,8 @@
 # Personal Website
 
-This is my personal website. I created it after finishing "The complete web developer in 2023: Zero to Mastery".
-I used React to build this website.
+This is my personal website which I developed following the completion of "The Complete Web Developer in 2023: Zero to Mastery" course. 
 
-It includes CSS animations.
+Here are some of the highlights of my learnings from this project:
+- Furthered my comfortability with React JS
+- Deepened my knowledge of CSS animations
+- Implemented a reverse scrolling mechanism
