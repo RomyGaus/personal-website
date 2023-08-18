@@ -15,6 +15,7 @@ class App extends Component {
     super()
     this.state = {
       scrollY: 0,
+      touchY: 0,
       maxScroll: 0,
       fallState: FallState.HasNotFallen,
       cliffTop: 0,
@@ -26,6 +27,8 @@ class App extends Component {
     window.history.scrollRestoration = 'manual';
     window.addEventListener("wheel", this.scrollHandler);
     window.addEventListener("DOMMouseScroll", this.scrollHandler);
+    window.addEventListener('touchstart', this.touchStartHandler);
+    window.addEventListener('touchmove', this.touchMoveHandler);
   }
 
   scrollHandler = event => {
@@ -54,6 +57,22 @@ class App extends Component {
     this.setState({
       scrollY: newScrollY,
       fallState: newFallState
+    })
+  }
+
+  touchStartHandler = event => {
+    this.setState({
+      touchY: event.changedTouches[0].screenY
+    })
+  }
+
+  touchMoveHandler = event => {
+    const scrolledDistance = (event.changedTouches[0].screenY - this.state.touchY) * 5
+    this.setState({
+      touchY: this.state.touchY
+    })
+    this.scrollHandler({
+      deltaY: scrolledDistance
     })
   }
 
@@ -224,7 +243,7 @@ class App extends Component {
             : <div></div>
           }
           { this.state.fallState === FallState.IsFalling || this.state.fallState === FallState.Recovering
-            ? <div class="bubble">Don't worry! I got you!</div>
+            ? <div className="bubble">Don't worry! I got you!</div>
             : <div></div>
           }
           <div className='romy-bottom'>
