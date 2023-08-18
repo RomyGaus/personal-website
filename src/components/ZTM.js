@@ -13,23 +13,32 @@ class ZTM extends Component {
                         <p className='date'>
                             Course Content:
                         </p>
-                        <p>
-                            HTML5, CSS3, CSS Grid, Flexbox, DOM Manipulation, 
-                            Javascript(including ES6/ES7/ES8/ES9/ES10/ES2020/ES2021/ES2022), 
-                            Asynchronous JavaScript, HTTP/JSON/AJAX, React, Redux, React Hooks, Git + Github, Command Line,
-                            Node.js, Express.js, NPM, RESTful API Design, PostgresSQL, SQL, Authentication, Authorization, Production and Deployment                            
-                        </p>
+                        <ul>
+                            <li>HTML5, CSS3 (including CSS Grid and Flexbox)</li>
+                            <li>DOM Manipulation</li>
+                            <li>JavaScript (spanning various ECMAScript versions)</li>
+                            <li>Asynchronous JavaScript + HTTP/JSON/AJAX</li>
+                            <li>React (including Redux and React Hooks)</li>
+                            <li>Git + Github</li>
+                            <li>Command Line proficiency</li>
+                            <li>Node.js + Express.js</li>
+                            <li>RESTful API Design</li>
+                            <li>NPM usage</li>
+                            <li>SQL + PostgresSQL</li>
+                            <li>Authentication and Authorization implementation</li>
+                            <li>Production and Deployment process</li>               
+                        </ul>
                     </li>
                     <li>
                         <p className='date'>
                             Course Projects:
                         </p>
                         <p>
-                            <a href="https://romygaus.github.io/FortuneCookie/" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Fortune Cookie</a>
+                            <a href="https://romygaus.github.io/FortuneCookie/" style={{color: "black"}} target='_blank' rel='noreferrer'>Fortune Cookie</a>
                             <br></br>
-                            <a href="https://romygaus.github.io/robofriends/" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Robofriends</a>
+                            <a href="https://romygaus.github.io/robofriends/" style={{color: "black"}} target='_blank' rel='noreferrer'>Robofriends</a>
                             <br></br>
-                            <a href="https://github.com/RomyGaus/background-generator" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Background-Generator</a>
+                            <a href="https://github.com/RomyGaus/background-generator" style={{color: "black"}} target='_blank' rel='noreferrer'>Background-Generator</a>
                         </p>
                     </li>
                     <li>
@@ -37,7 +46,7 @@ class ZTM extends Component {
                             Certificate:
                         </p>
                         <p>
-                            <a href="https://github.com/RomyGaus/personal_website/blob/7a595de746a1b5250cc991875491558168983675/src/images/Certificate_ZTM.jpeg" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Certificate</a>
+                            <a href="https://github.com/RomyGaus/personal_website/blob/7a595de746a1b5250cc991875491558168983675/src/images/Certificate_ZTM.jpeg" style={{color: "black"}} target='_blank' rel='noreferrer'>Certificate</a>
                         </p>
                     </li>
                 </ul>

@@ -8,14 +8,15 @@ class WorkExperience extends Component {
                 <ul>
                     <li>
                         <p className='date'>
-                            since 09/2019 
+                            09/2019 - present 
                             <br></br>
-                            LINEG
+                            LINEG<br/>
+                            (Left Lower Rhine Drainage Cooperative)
                         </p>
                         <p>
-                            Position: chemical laboratory technican
+                            Chemical Laboratory Technician
                             <br></br>
-                            tasks: analyze water samples, quality management, registration of samples and results in a database
+                            Maintained water quality according to DIN regulations by analyzing samples, organizing samples in a database, and heavily documenting official procedures.
                         </p>
                     </li>
                     <li>
@@ -25,9 +26,9 @@ class WorkExperience extends Component {
                             QHP Pharma Analytics
                         </p>
                         <p>
-                            Position: chemical laboratory technican
+                            Chemical Laboratory Technician
                             <br></br>
-                            tasks: GMP Documentation, analyze samples with gas chromatography
+                            Analyzed sensitive medical manufacturing samples with gas chromatography and documented processes according to GMP.
                         </p>
                     </li>
                     <li>
@@ -37,21 +38,22 @@ class WorkExperience extends Component {
                             Ruhrverband
                         </p>
                         <p>
-                            Position: chemical laboratory technican
+                            Chemical Laboratory Technician
                             <br></br>
-                            tasks: registration of samples and results in a database, sampling of water samples 
+                            Successfully researched and presented polymers effective in separating sludge in sewage water.
                         </p>
                     </li>
                     <li>
                         <p className='date'>
                             07/2016 - 12/2016
                             <br></br>
-                            Landesamt für Natur,Umwelt und Verbraucherschutz
+                            Landesamt für Natur, Umwelt und Verbraucherschutz<br/>
+                            (State Office for Nature, Environment and Consumer Protection)
                         </p>
                         <p>
-                            Position: chemical laboratory technican
+                            Chemical Laboratory Technician
                             <br></br>
-                            tasks: registration of results in a database, ICP-OES, TN
+                            Followed heavy metal concentrations in plants by sampling and analyzing various plant parts.
                         </p>
                     </li>
                 </ul>

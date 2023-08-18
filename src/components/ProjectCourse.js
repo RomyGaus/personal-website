@@ -11,11 +11,7 @@ class ProjectCourse extends Component {
                             Course Content:
                         </p>
                         <p>
-                            HTML, CSS & JavaScript
-                            <br></br>                         
-                            styling with flexbox, CSS animations & custom properties
-                            <br></br>
-                            DOM manipulation, events, array methods & HTTP requests
+                            A deep dive into HTML, CSS, and JavaScript without relying on any frameworks. Improved my understanding of Flexbox, CSS animations, DOM manipulation and other web development concepts.
                         </p>
                     </li>
                     <li>
@@ -23,7 +19,7 @@ class ProjectCourse extends Component {
                             Course Projects:
                         </p>
                         <p> 
-                            <a href="https://romygaus.github.io/50projects50days/" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>50 Projects in 50 Days - Romy Gaus</a>
+                            <a href="https://romygaus.github.io/50projects50days/" style={{color: "black"}} target='_blank' rel='noreferrer'>50 Projects in 50 Days - Romy Gaus</a>
                         </p>
                     </li>
                     <li>
@@ -31,7 +27,7 @@ class ProjectCourse extends Component {
                             Certificate:
                         </p>
                         <p>
-                            <a href="https://github.com/RomyGaus/personal_website/blob/7a595de746a1b5250cc991875491558168983675/src/images/Certificate%2050ProjectsIn50Days.jpeg" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Certificate</a>
+                            <a href="https://github.com/RomyGaus/personal_website/blob/7a595de746a1b5250cc991875491558168983675/src/images/Certificate%2050ProjectsIn50Days.jpeg" style={{color: "black"}} target='_blank' rel='noreferrer'>Certificate</a>
                         </p>
                     </li>
                 </ul>

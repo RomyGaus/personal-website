@@ -10,12 +10,13 @@ class Education extends Component {
                         <p className='date'>
                             09/2013 - 07/2016
                             <br></br>
-                            Landesamt für Natur,Umwelt und Verbraucherschutz
+                            Landesamt für Natur, Umwelt und Verbraucherschutz<br/>
+                            (State Office for Nature, Environment and Consumer Protection)
                         </p>
                         <p>
-                            Apprenticeship as a chemical laboratory technican
+                            Apprenticeship as a Chemical Laboratory Technican
                             <br></br>
-                            Final score school: ø 1.8
+                            Final score school: 1.8
                             <br></br>
                             Final score: 91/100 points
                         </p>
@@ -24,10 +25,12 @@ class Education extends Component {
                         <p className='date'>
                             08/2010 - 06/2012
                             <br></br>
-                            Käthe-Kollwitz-Berufskolleg 
+                            Käthe-Kollwitz-Berufskolleg<br/>
+                            (Vocational School)
                         </p>
                         <p>
-                            Graduation: Fachabitur im Bereich Gesundheit und Soziales (technical diploma in healthcare)
+                            Fachabitur im Bereich Gesundheit und Soziales<br/>
+                            (Technical Diploma in Healthcare)
                         </p>
                     </li>
                 </ul>

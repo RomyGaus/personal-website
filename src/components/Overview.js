@@ -13,7 +13,7 @@ class Overview extends Component {
                             <p className='date'>Key Features:</p>                       
                             <p>Effortless addition and deletion of items 
                                 <br></br>
-                                Modify existing items
+                                Modification of existing items
                                 <br></br>
                                 Automatic shopping list generator
                             </p>
@@ -24,9 +24,9 @@ class Overview extends Component {
                             Repositories:
                         </p>
                         <p> 
-                            <a href="https://github.com/RomyGaus/overview-frontend" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Frontend</a>
+                            <a href="https://github.com/RomyGaus/overview-frontend" style={{color: "black"}} target='_blank' rel='noreferrer'>Frontend</a>
                             <br></br>
-                            <a href="https://github.com/RomyGaus/overview-backend" style={{textDecoration: "none", color: "black"}} target='_blank' rel='noreferrer'>Backend</a>
+                            <a href="https://github.com/RomyGaus/overview-backend" style={{color: "black"}} target='_blank' rel='noreferrer'>Backend</a>
                         </p>
                     </li>
                 </ul>
