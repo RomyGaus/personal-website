@@ -419,7 +419,10 @@ nav.active .icon .line2 {
   align-items: center;
   justify-content: center;
   width: 550px;
-  margin: 200px;
+  max-width: 90vw;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-right: max(min(200px, 100vw - 550px), 0px);
   border-radius: 10px;
   transform: translateX(200%);
   transition: transform 0.5s ease;
