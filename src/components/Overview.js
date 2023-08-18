@@ -9,14 +9,13 @@ class Overview extends Component {
                     <li>
                         <p>
                             Overview is an inventory management application, built to keep track of supplies. It's a full stack project built with React, Node.js and Express.js.
+                            <br/><br/>
+                            <span className='date'>Key Features:</span><br/><br/>
+                            Effortless addition and deletion of items 
                             <br></br>
-                            <p className='date'>Key Features:</p>                       
-                            <p>Effortless addition and deletion of items 
-                                <br></br>
-                                Modification of existing items
-                                <br></br>
-                                Automatic shopping list generator
-                            </p>
+                            Modification of existing items
+                            <br></br>
+                            Automatic shopping list generator
                         </p>
                     </li>
                     <li>
