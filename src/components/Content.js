@@ -10,6 +10,7 @@ class Content extends Component {
     componentDidMount() {
         window.addEventListener('wheel', this.checkBoxes);
         window.addEventListener("DOMMouseScroll", this.checkBoxes);
+        window.addEventListener('touchmove', this.checkBoxes);
     }
 
     checkBoxes = event => {
