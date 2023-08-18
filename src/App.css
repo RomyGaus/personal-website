@@ -154,7 +154,7 @@ nav.active .icon .line2 {
   height: 35vh;
   display: inline-block;
   position: absolute;
-  right: 25%;
+  right: 10vw;
   z-index: 900;
 }
 
