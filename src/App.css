@@ -32,6 +32,28 @@ body {
   z-index: 1000;
 }
 
+.footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  justify-content: flex-end;
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1000;
+}
+
+@media (max-width: 760px) {
+  .footer {
+    display: inline-flex;
+  }
+  .footer nav ul a {
+    font-size: 16px;
+  }
+  .header nav {
+    display: none;
+  }
+}
+
 h1 {
   color: black;
   font-size: 50px;
@@ -54,7 +76,7 @@ nav {
 }
 
 nav.active {
-  width: 350px;
+  width: 450px;
 }
 
 nav ul {

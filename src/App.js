@@ -166,6 +166,9 @@ class App extends Component {
           <h1>Romy Gaus</h1>
           <NavBar></NavBar>
         </div>
+        <div className='footer'>
+          <NavBar></NavBar>
+        </div>
         <div className='climber' style={climberTopStyle}>
           <img alt='climber' src={climberImgSrc} />
         </div>
