@@ -67,7 +67,7 @@ class App extends Component {
   }
 
   touchMoveHandler = event => {
-    const scrolledDistance = event.changedTouches[0].screenY - this.state.touchY
+    const scrolledDistance = (event.changedTouches[0].screenY - this.state.touchY) * -1
     this.setState({
       touchY: this.state.touchY
     })
