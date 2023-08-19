@@ -479,4 +479,7 @@ nav.active .icon .line2 {
   .romy-bottom {
     left: calc(35vh / -5);
   }
+  .balloon {
+    display: none;
+  }
 }
