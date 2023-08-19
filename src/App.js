@@ -167,7 +167,11 @@ class App extends Component {
       bottom: `${this.state.scrollY + window.innerHeight * 0.32}px`
     }
 
-    let left = window.innerWidth * 0.05 + window.innerHeight * 0.175;
+    let romyBottomRect = document.getElementsByClassName('romy-bottom')[0]
+    let romyBottomLeft = romyBottomRect === undefined
+                          ? window.innerWidth * 0.05
+                          : romyBottomRect.getBoundingClientRect().left
+    let left = romyBottomLeft + window.innerHeight * 0.175;
     let bottom = window.innerHeight * 0.175 - 5;
     let opposite = window.innerWidth * 0.4 - left;
     let adjacent = this.state.maxScroll - bottom + window.innerHeight - this.state.cliffTop;

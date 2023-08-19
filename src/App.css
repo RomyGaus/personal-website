@@ -42,18 +42,6 @@ body {
   z-index: 1000;
 }
 
-@media (max-width: 760px) {
-  .footer {
-    display: inline-flex;
-  }
-  .footer nav ul a {
-    font-size: 16px;
-  }
-  .header nav {
-    display: none;
-  }
-}
-
 h1 {
   color: black;
   font-size: 50px;
@@ -475,4 +463,20 @@ nav.active .icon .line2 {
 
 .box .date {
   font-weight: 600;
+}
+
+
+@media (max-width: 760px) {
+  .footer {
+    display: inline-flex;
+  }
+  .footer nav ul a {
+    font-size: 16px;
+  }
+  .header nav {
+    display: none;
+  }
+  .romy-bottom {
+    left: calc(35vh / -5);
+  }
 }
