@@ -21,7 +21,7 @@ class NavBar extends Component {
           <li><a href="https://github.com/RomyGaus" target='_blank' rel='noreferrer'>GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/romy-gaus-46615b272/" target='_blank' rel='noreferrer'>LinkedIn</a></li>
           <li><a href="https://www.youtube.com/@RomyGaus" target='_blank' rel='noreferrer'>YouTube</a></li>
-          <li><a href="" target='_blank' rel='noreferrer'>Resume</a></li>
+          <li><a href="https://github.com/RomyGaus/personal-website/blob/main/src/resume.pdf" target='_blank' rel='noreferrer'>Resume</a></li>
         </ul>
         <button className="icon" id="toggle" onClick={this.toggleNavBar}>
           <div className="line line1"></div>
