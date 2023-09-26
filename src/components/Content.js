@@ -4,6 +4,7 @@ import WorkExperience from './WorkExperience';
 import ZTM from './ZTM';
 import ProjectCourse from './ProjectCourse';
 import Overview from './Overview';
+import LotLotR from './LotLotR';
 
 class Content extends Component {
 
@@ -30,6 +31,7 @@ class Content extends Component {
     render() {
         return(
             <div className='content'>
+                <LotLotR></LotLotR>
                 <Overview></Overview>
                 <ProjectCourse></ProjectCourse>
                 <ZTM></ZTM>
