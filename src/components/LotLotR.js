@@ -8,7 +8,7 @@ class LotLotR extends Component {
                 <ul>
                     <li>
                         <p>   
-                            LotLotR is a game where players have to fill out the blank space in a 'The Lord of the Rings' quote. This project is built with AngularJS und TypeScript.
+                            LotLotR is a game where players have to fill out the blank space in a 'The Lord of the Rings' quote. This project is built with AngularJS and TypeScript.
                             <br/><br/>
                             <span className='date'>Key Features:</span><br/><br/>
                             Fetches quotes from an API 
