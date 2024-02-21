@@ -42,7 +42,7 @@ class ZTMangular extends Component {
             <p className="date">Certificate:</p>
             <p>
               <a
-                href="https://github.com/RomyGaus/personal_website/blob/7a595de746a1b5250cc991875491558168983675/src/images/Certificate-AngularCourse.jpeg"
+                href="https://github.com/RomyGaus/personal-website/blob/main/src/images/Certificate-AngularCourse.jpeg"
                 style={{ color: "black" }}
                 target="_blank"
                 rel="noreferrer"
