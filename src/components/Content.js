@@ -6,6 +6,7 @@ import ZTMangular from "./ZTM-angular";
 import ProjectCourse from "./ProjectCourse";
 import Overview from "./Overview";
 import LotLotR from "./LotLotR";
+import OtherCourses from "./OtherCourses";
 
 class Content extends Component {
   componentDidMount() {
@@ -33,6 +34,7 @@ class Content extends Component {
       <div className="content">
         <LotLotR></LotLotR>
         <Overview></Overview>
+        <OtherCourses></OtherCourses>
         <ProjectCourse></ProjectCourse>
         <ZTMangular></ZTMangular>
         <ZTM></ZTM>

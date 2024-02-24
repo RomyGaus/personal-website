@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0;
   overscroll-behavior-y: contain;
 }
@@ -21,7 +21,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #ccecfc;
-  background-image: linear-gradient(to top, #ccecfc, #8bd5f7, #527593, #3F505F);
+  background-image: linear-gradient(to top, #ccecfc, #8bd5f7, #527593, #3f505f);
 }
 
 .header {
@@ -260,7 +260,6 @@ nav.active .icon .line2 {
   transform: scaleX(-1);
 }
 
-
 @keyframes moveBalloon {
   0% {
     transform: translateX(-100%);
@@ -334,7 +333,7 @@ nav.active .icon .line2 {
   left: 55px;
 }
 .bubble:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 0;
@@ -431,8 +430,8 @@ nav.active .icon .line2 {
   justify-content: center;
   width: 550px;
   max-width: 90vw;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   margin-right: max(min(200px, 100vw - 550px), 0px);
   border-radius: 10px;
   transform: translateX(200%);
@@ -465,7 +464,6 @@ nav.active .icon .line2 {
 .box .date {
   font-weight: 600;
 }
-
 
 @media (max-width: 760px) {
   .footer {
