@@ -43,10 +43,10 @@ class App extends Component {
     newScrollY = Math.max(ceiling, 0);
 
     var newFallState = this.state.fallState;
-    if (newScrollY > 700 && this.state.fallState === FallState.HasNotFallen) {
+    if (newScrollY > 500 && this.state.fallState === FallState.HasNotFallen) {
       // Initiate Falling
       this.fallingClimber();
-      newScrollY = 700;
+      newScrollY = 500;
       newFallState = FallState.IsFalling;
     } else if (this.state.fallState === FallState.Recovering) {
       newScrollY = 0;
