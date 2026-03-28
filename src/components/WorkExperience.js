@@ -13,9 +13,22 @@ class WorkExperience extends Component {
               comnovo GmbH
             </p>
             <p>
+              Scrum Master
+              <br></br>I work as a Scrum Master for two cross-functional
+              development teams, where I facilitate Scrum events and support
+              teams in becoming more self-organized and effective. I focus on
+              improving collaboration, removing impediments, and driving
+              continuous improvement through structured retrospectives and
+              actionable follow-ups. With my background in development, I bridge
+              the gap between technical teams and stakeholders and support a
+              shared understanding of goals and delivery.
+            </p>
+            <p>
               Frontend Developer
               <br></br>
-              Frontend development with AngularJS.
+              Previously, I worked as a Frontend Developer building and
+              maintaining Angular applications, with a strong focus on code
+              quality, collaboration, and continuous improvement.
             </p>
           </li>
           <li>
